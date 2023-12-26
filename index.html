@@ -1,1 +1,22 @@
 hello, world!
+Day 1
+  install Verilator on WSL2
+    select ubuntu 22
+  Verilator git clone
+  autoconf         # Create ./configure script
+  ./configure      # Configure and create Makefile
+  make -j `nproc`  # Build Verilator itself (if error, try just 'make')
+  
+Day 2
+How to install systemC-2.3.4
+  1. tar -xf ./sys
+  2. cd systemc-2.3.4
+  3. autoreconfig -i
+  4. autoupdate
+  5. mkdir build
+  6. cd build
+  7. export CXX=g++
+  8. ../configure --prefix=${HOME}/lib/systemc
+  9. gmake
+  10. gmake check
+  11. gmake install
